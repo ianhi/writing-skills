@@ -1,7 +1,7 @@
 {
   "name": "writing",
   "description": "A collection of technical-writing skills — a shared core plus specializations for docs, teaching, communication, and reports, and an always-on guide for talking with the user. Each genre covers both authoring and review against one rubric.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "ianhi",
     "email": "ianhuntisaak@gmail.com"

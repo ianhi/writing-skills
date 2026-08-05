@@ -25,9 +25,9 @@ In Claude Code, install from the `ianhi-plugins` marketplace:
 their own. Update later with `/plugin marketplace update ianhi-plugins` then
 `/plugin update writing@ianhi-plugins`; remove with `/plugin uninstall writing`.
 
-You get all seven skills — they auto-load per task from their descriptions — plus an
-[always-on kernel](#the-always-on-kernel). Using a different agent? The skills are
-plain Markdown; see [Any agent](#any-agent).
+You get all seven skills — they auto-load per task from their descriptions — with
+the core and conversation rules [always on](#always-on). Using a different agent?
+The skills are plain Markdown; see [Any agent](#any-agent).
 
 ## The skills
 
@@ -53,22 +53,21 @@ back-and-forth with the user rather than producing an artifact, so it's always-o
 `writing-review` is a runner, not a rubric: it dispatches a reviewer subagent that
 grades a piece against `writing-core` plus the relevant genre skill.
 
-## The always-on kernel
+## Always-on
 
-Installing the plugin adds a `SessionStart` hook that prints
-`skills/writing-core/kernel.md` into context at the start of every session (and
-after `/clear` or a compaction), so the rules govern from the first turn without the
-agent having to choose to load a skill. The kernel is small on purpose (~700
-tokens): the conversation rules, the core writing rules, and a checklist to scan
-before finalizing prose. It is a floor, not the full rubric — it names the full
-skills and tells the agent to load them for a real writing task.
+Installing the plugin adds a `SessionStart` hook that prints `writing-core` and
+`writing-conversation` into context at the start of every session (and after
+`/clear` or a compaction), so the rules govern from the first turn without the
+agent having to choose to load a skill. Together they're ~5k tokens — cached, a
+fraction of a percent of context — and they're the full rubric, so there's no
+smaller summary to keep in sync. Genre skills still load per task.
 
 ## Any agent
 
 The skills are plain Markdown, usable by anything that reads instructions. Inject
-`skills/writing-core/kernel.md` wherever your agent reads instructions every turn
-(that is all the hook does), or load `writing-core` and `writing-conversation`
-yourself, then a genre skill per task.
+`skills/writing-core/SKILL.md` and `skills/writing-conversation/SKILL.md` wherever
+your agent reads instructions every turn (that is all the hook does), then load a
+genre skill per task.
 
 ## Developing
 

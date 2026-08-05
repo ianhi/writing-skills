@@ -6,35 +6,22 @@ description: The shared foundation for all technical writing — minimizing read
 # Writing Core
 
 The principles common to every kind of technical writing — docs, tutorials,
-blog posts, reports, PRs, commit messages, chat. Load this first, then load the
-**genre skill** that fits. A *genre skill* is one of the four below, each covering
-a single kind of writing:
+blog posts, reports, PRs, commit messages, chat. Load this first, then the **genre
+skill** that fits (`writing-docs`, `writing-teaching`, `writing-comms`, or
+`writing-reports`). Each genre skill holds an Authoring and a Review section on
+one rubric: read its review bar *before* drafting.
 
-- **`writing-docs`** — reference and how-to documentation.
-- **`writing-teaching`** — tutorials, teaching notebooks, anything whose job is
-  to teach a concept.
-- **`writing-comms`** — short-form sent to others: PR descriptions, commit
-  messages, Slack, issue comments.
-- **`writing-reports`** — shareable prose deliverables: reports, BD/prospect
-  briefs, summaries read out of context.
-
-The genre skills are thin: each holds only what's specific to its genre and
-assumes everything in this core.
-
-Talking with the user in-session isn't a genre — that's the always-on
-`writing-conversation`. The craft principles here (plain prose, no AI-ese,
-honesty, subtraction) apply to it too; its audience and out-of-context gates do
-not, because the user is present and shares your context.
+Talking with the user in-session isn't a genre — the always-on
+`writing-conversation` covers it, as addendums to this core: the craft rules here
+apply to dialogue too; the audience and out-of-context gates do not, because the
+user is present and shares your context.
 
 ## The overriding principle: make it easy for the reader
 
 Every rule below serves one goal: **spend the reader's effort on your ideas**, not
 on parsing your writing. Attention is a fixed budget — whatever they burn
 decoding a clumsy sentence or hunting for a source is gone from understanding the
-point.
-
-Every rule below moves effort off the reader and onto the writer. When a choice is
-unclear, pick what costs the reader less.
+point. When a choice is unclear, pick what costs the reader less.
 
 ## Writing is collaborative — keep the user in the loop
 
@@ -45,22 +32,14 @@ So don't disappear and return with a finished draft built on guesses. Involve
 them at the decisions that shape the piece — **who it's for** (§1), **the voice
 and structure**, and **any rewrite of prose they already wrote** (§2). When a
 choice would change its direction, surface it and ask rather than deciding
-silently. Drafting freely is fine; deciding *for* them is not.
-
-## Author, then review — one bar, used twice
-
-Every genre skill has an **Authoring** and a **Review** section on the *same*
-rubric: the standards you review against are the standards you write to. Read the
-review bar *before* drafting — it checks that you hit the bar, not rescues a draft
-that ignored it.
+silently.
 
 ## 1. Confirm the audience before you write
 
 Every other judgment — what to assume, what to cut, how to sequence — is made
 relative to one audience. So pin it down *first*: treat confirming it as a **gate**
 you clear before drafting prose. Unless the audience is genuinely obvious,
-**confirm it with the user** rather than guessing — getting this wrong wastes the
-whole draft.
+**confirm it with the user** rather than guessing.
 
 Common audiences and what they change:
 
@@ -71,14 +50,13 @@ Common audiences and what they change:
 
 **Code comments and docstrings** are a special case, outside this gate. They're
 part of the code, with a fixed audience (the next developer in this file) and
-their own conventions — write them with your normal coding latitude; never stop
-to confirm an audience for a docstring while building a codebase.
+their own conventions — write them with your normal coding latitude.
 
 For **prose**, the gate scales with the cost of guessing wrong:
 
 - **Confirm first** when a standalone piece would be written differently for
-  different readers — a doc, a tutorial, a report, a blog post, a README for a new
-  project. One line — "who's the reader: end users, contributors, or
+  different readers — a doc, a tutorial, a report, a blog post, a README written as
+  its own deliverable. One line — "who's the reader: end users, contributors, or
   decision-makers?" — saves a whole rewrite.
 - **Just proceed** when the reader is obvious or the writing rides along with a
   task the user already scoped: a commit message, a reply in an ongoing thread,
@@ -90,9 +68,7 @@ is confusing.
 ### Introduce only what the audience doesn't already know
 
 The audience fixes what you can take for granted, and therefore what you must
-introduce before relying on it. Over-explaining what they know wastes attention
-and reads as condescending; under-explaining what they don't loses them. This
-governs two things:
+introduce before relying on it.
 
 - **Concepts** — build up an idea, mechanism, or piece of background the audience
   lacks before you lean on it; don't re-derive one they already hold. (At the
@@ -125,38 +101,32 @@ primitives are universal:
 - **Start with the destination.** The most important idea goes at the top as a
   motivating hook, not buried after the building blocks.
 - **Frame first, then detail.** For anything with history, lead with the arc —
-  "talked in 2024 → churned → fresh pain in 2026" — so every later line lands
-  against a frame the reader already has.
+  "talked in 2024 → churned → fresh pain in 2026".
 - **Order by dependency.** If A references B, define B first. A bare forward
   reference — a "see below", a term used before it exists — is close to
   unacceptable: it forces the reader to hold an undefined thing in mind or go
-  hunting. The one legitimate
-  forward pointer is a *deliberate, signposted* one that answers a question the
+  hunting. The one legitimate forward pointer is a *deliberate, signposted* one
+  that answers a question the
   reader is already forming — "wondering how this scales? good instinct — we get
-  there in §7." That works because it manages the reader's expectation instead of
-  assuming they already have the answer.
+  there in §7."
 - **Order by importance, monotonically.** Within a list or section, let importance
   move one way — build up to the most important, or lead with it and taper — never
-  bounce (big, trivial, huge, minor). A human reads in sequence and loses the thread
-  when the stakes jump around. You take the whole list in at once, so this is a
-  place your own instinct won't warn you: check it deliberately.
+  bounce (big, trivial, huge, minor). You take the whole list in at once, so this
+  is a place your own instinct won't warn you: check it deliberately.
 - **Keep cross-references monotonic.** When the text points to its own sections,
   they should come up roughly in order. If you catch yourself citing §7 before §3,
   that's a smell the sections themselves are mis-ordered — fix the order, not the
   reference.
 - **Write the intro and summary last.** They're easier, and far less vague, once
-  the body exists — only then do you know what to introduce and what to sum up.
-  Drafting them first produces generic hedging ("this document explores various
-  aspects of…") you'll just rewrite.
+  the body exists. Drafting them first produces generic hedging ("this document
+  explores various aspects of…") you'll just rewrite.
 
-But the *shape* those primitives take is genre-specific — a teaching narrative
-arc, a scannable report, a reference catalog are structured very differently.
-Don't force one mold on every piece; the genre skill you loaded defines its shape.
+The *shape* those primitives take is genre-specific — don't force one mold on
+every piece; the genre skill you loaded defines its shape.
 
 ## 4. Write plainly and directly
 
-The default register for all technical writing: every choice below lowers what the
-reader spends parsing your prose, so their attention lands on your ideas.
+The default register for all technical writing.
 
 - **Lead with the answer.** No preamble, no wind-up that defers the point ("so
   the first question is…"). The first sentence carries the point.
@@ -167,59 +137,56 @@ reader spends parsing your prose, so their attention lands on your ideas.
 - **Cut filler and hedging.** "it's worth noting", "in order to", "basically",
   "essentially", "I think", "as we can see" — delete them. One strong sentence
   beats three.
-- **Prefer plain words.** "use" not "utilize", "so" not "in order
-  to", "helps" not "facilitates". Skip throat-clearing adjectives ("robust",
-  "seamless", "powerful", "comprehensive") unless they carry real information.
+- **Prefer plain words.** "use" not "utilize", "helps" not "facilitates". Skip
+  throat-clearing adjectives ("robust", "seamless", "powerful", "comprehensive")
+  unless they carry real information.
 - **Pin every referent.** Every "this", "it", "that", "here" resolves to one
   unambiguous antecedent; the reader should never reread to find what it points at.
   "welcome here" → "welcome in this repo".
+- **One name per thing.** Once you name a concept, use that exact name everywhere;
+  a synonym ("the runner" / "the executor" for the same component) reads as a
+  second concept.
 - **Format visually when it helps.** The layout of the text — bullets, short
   headers, tables — as opposed to §3's organization. Good when it aids scanning;
-  reach for it freely. Don't split a single thought across bullets, and don't add
-  formatting to padding.
-- **Bold a few words.** Not whole sentences — emphasis works by contrast, and a
-  fully bolded sentence has no focal point. Bold the two or three words that carry
-  the point, or none.
+  reach for it freely. Don't split a single thought across bullets, and don't use
+  formatting to dress up padding.
+- **Bold a few words.** Not whole sentences — emphasis works by contrast. Bold the
+  two or three words that carry the point, or none.
 - **Keep parallel things parallel.** Headings at one level, and bullets in one
   list, should share grammatical form — all imperatives, or all noun phrases, not a
-  mix. A tense or form swap mid-list is a speed bump the reader feels even if they
-  can't name it.
+  mix.
 
 ## 5. Avoid AI-ese
 
 The tells that mark writing as machine-generated — empty phrases that carry no
-information and erode trust. Cut them wherever they add nothing, which is almost
-always. But treat the lists below as *tells, not a banned-words list*: a phrase
-that genuinely does work stays. Ban the emptiness, not the word.
+information and erode trust. Treat the list below as *tells, not a banned-words
+list*: ban the emptiness, not the word.
 
-Beyond the named tells, one general test catches shapes this list can't
-enumerate: does a sentence carry a fact, or only *comment on* the content — how to
-feel about it, that it's coming, that it matters? The second kind is the tell.
-
-The shapes it most often takes (the test catches the rest):
+One general test catches shapes no list can enumerate: does a sentence carry a
+fact, or only *comment on* the content — how to feel about it, that it's coming,
+that it matters? The second kind is the tell.
 
 - **The regular-beat triad.** Three short parallel phrases restating one idea in
-  the same rhythm — "fully net-new, no warm path, straight cold"; "real budget,
-  real scale, production reliance." Say it once, with the real fact; vary sentence
-  length.
+  the same rhythm — "fully net-new, no warm path, straight cold." Say it once, with
+  the real fact; vary sentence length.
 - **"X isn't just Y — it's Z."** And its cousins: "not only… but…", and the plain
-  antithesis "A, not B" ("a demo, not a dataset"; "a decision, not a default"). A
-  hype frame masquerading as insight. State what X is.
+  antithesis "A, not B". A hype frame masquerading as insight — state what X is.
+  The antithesis is empty when B is a straw man ("a decision, not a default" names
+  nothing) and earns its place when B is a real mistake the reader might make
+  ("comment the code, not the change" names the error).
 - **Pileups.** Em-dash pileups and adjective stacks. One em-dash per sentence at
   most. Also decorative bold-lead-in stacks — every bullet opening with a bold
   *label* that carries no real content. (A bold *proper-noun name* used as a
   scannable index is different and good — see `writing-reports`.)
 - **Editorial fluff / hype conclusions.** Lines that tell the reader how to feel
   or restate the obvious with drama: "getting in front of it is the whole game",
-  "the arc is the whole pitch", "make no mistake", "the key thing here". State the
-  fact; let the reader draw the conclusion.
+  "make no mistake". State the fact; let the reader draw the conclusion.
 - **Promissory framing.** The forward-looking twin of a hype conclusion:
   announcing or labeling what follows instead of just saying it — its importance
   ("the two reasons are worth separating", "here's the subtle part", "the key
   bit"), or its status as a list, aside, or boilerplate ("two things worth
-  confirming:", "the one piece of ceremony:"). The frame spends a sentence to add
-  nothing; a reader judges importance from the content. State the thing; if it
-  matters, that shows.
+  confirming:", "the one piece of ceremony:"). State the thing; if it matters,
+  that shows.
 - **Words used as texture.** "situational awareness", "worth noting", "at the end
   of the day", "de facto" — often reached for as tone, not fact. But any can be
   exact in the right spot ("the *de facto* standard"); cut only the empty use, not
@@ -236,11 +203,9 @@ One principle, code and prose alike: **comment the code, not the change**; **wri
 the document, not its edit history**. Describe what *is*, not how it came to be.
 
 - **No process narration.** How many items you sampled, when you re-checked, "ordered
-  roughly by leverage", "verified against X". The reader wants findings, not how they
-  were made.
+  roughly by leverage", "verified against X".
 - **No prior-draft references.** "we cross-checked and the picture changed", "as
-  discussed", "now updated to". A reader only sees the doc as
-  it is; references to earlier state are noise.
+  discussed", "now updated to".
 - **Don't describe the document.** "this report covers four prospects",
   "each section sets up the problem so you can decide", "read this through the lens
   of the table". State the substance; let the structure speak.
@@ -254,9 +219,8 @@ the document, not its edit history**. Describe what *is*, not how it came to be.
 
 Most writing improves by *removal* — a tangent cut, a caveat deferred, a second
 example that earns its place or goes. When adding and cutting both fix a problem,
-prefer the cut — unless what's being compressed is the claim the piece exists to
-make. Brevity is not the goal, though — low reader effort is. Cut what doesn't
-serve the reader; keep (and make explicit) what does.
+prefer the cut. Brevity is not the goal, though — low reader effort is. Cut what
+doesn't serve the reader; keep (and make explicit) what does.
 
 **Proportion space to load.** The claim a piece exists to make earns more room
 than the detail supporting it. Terseness is a default, not a quota — when the one
@@ -267,8 +231,7 @@ into it.
 
 ## 8. Verify before you write it
 
-Every claim must trace to something checkable — a run, a source, a real example —
-never to invention.
+Every claim must trace to something checkable, never to invention.
 
 - **Claims match reality.** An assertion about behavior isn't acceptable until
   something confirms it — a run, a test, a worked example, a verifiable fact.
@@ -291,8 +254,7 @@ much that links become noise:
   opinion.
 - **Don't over-link.** Link what a skeptical reader would actually want to verify;
   skip the obvious, and don't re-link the same source at every mention. A page of
-  blue text is as hard to read as one with no links — over-linking taxes the
-  reader like any other clutter.
+  blue text is as hard to read as one with no links.
 - **Cite with a compact trailing link**, not a whole-sentence hyperlink — whole-phrase
   links bleed together and kill scanning.
   - Bad: `They [reproduced corruption in production](url) and [worked around it](url).`
@@ -302,3 +264,24 @@ much that links become noise:
   files. Show both the problem location and the fix.
 - **Never invent a URL.** If a claim can't be sourced, cut it or flag it — don't
   fabricate a link.
+
+## 10. Re-read before you finalize
+
+One deliberate pass, not a skim; the failure is not looking. Scan for:
+
+- a winding preamble before the point → lead with the answer
+- the central claim buried in a subordinate clause → give it its own sentence
+- an unmarked jump between abstract and concrete → hold one altitude
+- a vague "this / it / here" with no antecedent → name it
+- a 3-beat triad, "X isn't just Y — it's Z", or an "A, not B" where B names no
+  real mistake → say it once, plainly
+- a sentence that only announces or rates what follows ("the key part", "worth
+  noting") → cut it
+- a whole-sentence bold, an em-dash pileup, or an adjective stack → cut
+- process narration, a prior-draft reference, or a line describing the document
+  → cut it
+- an assertion nothing confirmed, or a rationale you couldn't find → verify,
+  flag, or cut
+- a non-parallel list → match the grammatical form
+- a term used before it's defined → define it on first use
+- a load-bearing claim with no source → link it or cut it

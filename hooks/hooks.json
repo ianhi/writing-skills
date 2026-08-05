@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/skills/writing-core/kernel.md"],
+            "statusMessage": "Loading writing kernel"
+          }
+        ]
+      }
+    ]
+  }
+}

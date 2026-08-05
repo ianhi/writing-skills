@@ -1,0 +1,33 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ianhi-writing",
+  "description": "Ian's technical-writing skills for Claude Code",
+  "owner": {
+    "name": "ianhi",
+    "email": "ianhuntisaak@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "writing",
+      "description": "Technical-writing skills — a shared core plus specializations for docs, teaching, communication, and reports, and an always-on guide for talking with the user.",
+      "version": "0.1.0",
+      "author": {
+        "name": "ianhi",
+        "email": "ianhuntisaak@gmail.com"
+      },
+      "source": "./",
+      "category": "productivity",
+      "displayName": "Technical Writing Skills",
+      "homepage": "https://github.com/ianhi/writing-skills",
+      "repository": "https://github.com/ianhi/writing-skills",
+      "keywords": [
+        "writing",
+        "documentation",
+        "teaching",
+        "communication",
+        "technical-writing"
+      ],
+      "license": "MIT"
+    }
+  ]
+}

@@ -5,11 +5,12 @@ description: Write short-form technical communication you send to other people â
 
 # Writing Comms
 
-> **Critical gate.** Confirm AI-authored communication is welcome here before you
-> draft. This is someone else's venue, and many projects, teams, and communities
-> restrict or ban AI-written contributions. Unless you already know it's accepted,
-> check with the user before drafting anything sent under their name, and follow
-> the venue's disclosure norms.
+> **Critical gate.** Before drafting, confirm AI-authored communication is welcome
+> in the specific project or on the platform you're posting to. This is someone
+> else's venue, and many projects, teams, and communities restrict or ban AI-written
+> contributions. Unless you already know it's accepted there, check with the user
+> before drafting anything sent under their name, and follow the venue's disclosure
+> norms.
 
 Short-form communication you send to other people â€” PR descriptions, commit
 messages, Slack, issue comments. (Talking with the *user* in-session is

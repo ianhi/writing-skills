@@ -18,6 +18,10 @@ to install it, see [README.md](README.md).
   principle applies to more than one skill, it lives in core and the others
   reference it by section number ("core §N"). Don't duplicate — a genre skill holds
   only what's specific to its genre.
+- **Lead every section with the general rule; examples illustrate it.** State the
+  governing principle first, then a few short examples — and a counter-example where
+  it marks the boundary. A bare catalog of specific tells lets a reader pattern-match
+  the listed cases and miss unlisted ones; the stated rule is what generalizes.
 - **Each genre skill keeps an Authoring and a Review section on one rubric.** Don't
   split authoring and review into separate skills.
 - **Make each `description` concrete about *when to load* the skill** — that's what

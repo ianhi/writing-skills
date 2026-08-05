@@ -38,6 +38,9 @@ when two options both work, pick the one that's faster to skim.
 
 ## Lists and visual boundaries (the top readability lever)
 
+The eye should see the structure before reading a word: scannable items, and levels
+that read section > sub-group > item-name > body.
+
 - **Bullet what gets scanned.** A long run of orgs/items comma-spliced
   into a paragraph is unreadable; one item per bullet: a **bold name**, then ≤1
   short clause and a trailing citation, so the eye runs down the bold left edge. But it's a
@@ -75,7 +78,9 @@ Core §9 governs; report-specific emphasis:
 
 ## Off-limits in the reader's copy
 
-The doc is read out of context (core §6). Beyond that, for reports specifically:
+The doc is read out of context (core §6). Beyond that: give the reader facts they
+can act on, and keep out the machinery that produced them and your verdicts on them.
+For reports specifically:
 
 - **No repo/tooling housekeeping** — "`reports/` is gitignored", file paths. A plain
   confidentiality marker (*Private — internal use only*) is the only meta allowed.
@@ -91,6 +96,9 @@ The doc is read out of context (core §6). Beyond that, for reports specifically
   unless the reader asked for a ranked list.
 
 ## Honesty
+
+Represent every fact at its true strength — don't make it more recent, certain, or
+significant than the evidence supports.
 
 - **Date every interaction** you cite (call, meeting, note, issue) — from metadata
   or timestamps. A 2023 call and a last-month one mean different things; flag stale

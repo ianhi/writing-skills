@@ -30,7 +30,7 @@ Doc types and their key concern:
 
 ## Authoring
 
-Everything in `writing-core` applies. The doc-specific additions:
+The doc-specific additions:
 
 - **Scope notes.** When a page covers only part of a system, say so up top: "This
   page covers types persisted to storage. For in-memory types, see session.md."

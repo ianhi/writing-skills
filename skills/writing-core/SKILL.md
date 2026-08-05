@@ -33,17 +33,13 @@ on parsing your writing. Attention is a fixed budget — whatever they burn
 decoding a clumsy sentence or hunting for a source is gone from understanding the
 point.
 
-This is what motivates the specifics: structure and dependency order (§3), plain
-prose (§4), relentless subtraction (§7), linked claims (§9) — each moves effort
-off the reader and onto the writer. When a choice is unclear, pick what costs the
-reader less.
+Every rule below moves effort off the reader and onto the writer. When a choice is
+unclear, pick what costs the reader less.
 
 ## Writing is collaborative — keep the user in the loop
 
-Two things that sound opposed but aren't: the work is **collaborative**, and the
-piece is **the user's**. Collaboration is about process — you keep them in the
-loop; ownership is about authority — the final say is theirs, not yours. You do
-the drafting and the craft; they decide the direction.
+The work is **collaborative**, but the piece is **the user's**: you do the drafting
+and the craft; they decide the direction.
 
 So don't disappear and return with a finished draft built on guesses. Involve
 them at the decisions that shape the piece — **who it's for** (§1), **the voice
@@ -53,11 +49,10 @@ silently. Drafting freely is fine; deciding *for* them is not.
 
 ## Author, then review — one bar, used twice
 
-Every genre skill has an **Authoring** section and a **Review** section built on
-the *same* rubric. That is deliberate: the standards you review against are the
-standards you write to. Read the review rubric *before* drafting so the rules
-are baked in from the start — review is a check that you hit the bar, not a
-rescue for having ignored it.
+Every genre skill has an **Authoring** and a **Review** section on the *same*
+rubric: the standards you review against are the standards you write to. Read the
+review bar *before* drafting — it checks that you hit the bar, not rescues a draft
+that ignored it.
 
 ## 1. Confirm the audience before you write
 
@@ -103,8 +98,8 @@ governs two things:
   lacks before you lean on it; don't re-derive one they already hold. (At the
   section scale, the same move is *problem before solution* — see `writing-teaching`.)
 - **Terms** — define a term this audience won't know the first time you use it. An
-  undefined term is one of the easiest ways to lose a reader, who then stalls or
-  reads on confused; a term they already know needs no gloss.
+  undefined term is one of the easiest ways to lose a reader; one they already know
+  needs no gloss.
 
 When you're unsure whether to explain something, that uncertainty usually means the
 audience isn't pinned down yet.
@@ -135,7 +130,7 @@ primitives are universal:
 - **Order by dependency.** If A references B, define B first. A bare forward
   reference — a "see below", a term used before it exists — is close to
   unacceptable: it forces the reader to hold an undefined thing in mind or go
-  hunting, the exact tax this whole skill exists to prevent. The one legitimate
+  hunting. The one legitimate
   forward pointer is a *deliberate, signposted* one that answers a question the
   reader is already forming — "wondering how this scales? good instinct — we get
   there in §7." That works because it manages the reader's expectation instead of
@@ -160,16 +155,24 @@ Don't force one mold on every piece; the genre skill you loaded defines its shap
 
 ## 4. Write plainly and directly
 
-The default register for all technical writing.
+The default register for all technical writing: every choice below lowers what the
+reader spends parsing your prose, so their attention lands on your ideas.
 
 - **Lead with the answer.** No preamble, no wind-up that defers the point ("so
   the first question is…"). The first sentence carries the point.
+- **Hold one altitude.** Set the level of detail the point needs and stay there;
+  drop into a specific or climb to a generalization only on purpose, signposted. A
+  deliberate foray into detail is good writing; an unmarked slide between the
+  abstract and the concrete mid-passage is the tell.
 - **Cut filler and hedging.** "it's worth noting", "in order to", "basically",
   "essentially", "I think", "as we can see" — delete them. One strong sentence
   beats three.
 - **Prefer plain words.** "use" not "utilize", "so" not "in order
   to", "helps" not "facilitates". Skip throat-clearing adjectives ("robust",
   "seamless", "powerful", "comprehensive") unless they carry real information.
+- **Pin every referent.** Every "this", "it", "that", "here" resolves to one
+  unambiguous antecedent; the reader should never reread to find what it points at.
+  "welcome here" → "welcome in this repo".
 - **Format visually when it helps.** The layout of the text — bullets, short
   headers, tables — as opposed to §3's organization. Good when it aids scanning;
   reach for it freely. Don't split a single thought across bullets, and don't add
@@ -263,6 +266,9 @@ it plainly, on its own, with its consequence made concrete. Cut around it, not
 into it.
 
 ## 8. Verify before you write it
+
+Every claim must trace to something checkable — a run, a source, a real example —
+never to invention.
 
 - **Claims match reality.** An assertion about behavior isn't acceptable until
   something confirms it — a run, a test, a worked example, a verifiable fact.

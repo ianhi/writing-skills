@@ -31,7 +31,8 @@ you calibrate to. Read:
   options, getting something executed, debugging, learning, or thinking out loud.
 - **The depth and speed they want** — a fast unblock or a thorough treatment.
 - **Where they are in their own process** — early and divergent (they want options
-  and someone to think with) or late and convergent (they want a call).
+  and someone to think with) or late and convergent (they've mostly decided; they
+  want you to confirm the call or carry it out).
 
 ## Re-read as it evolves
 

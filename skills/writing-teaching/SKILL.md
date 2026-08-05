@@ -7,7 +7,7 @@ description: Write and review teaching material — tutorials, teaching notebook
 
 Material whose job is to *teach* — tutorials, teaching notebooks, explanatory
 posts, workshops. **Load `writing-core` first**; this adds the pedagogy-specific
-rubric and review workflow. (Supersedes the old `pedagogy-review` skill.)
+rubric and review workflow.
 
 ## Guiding principles
 

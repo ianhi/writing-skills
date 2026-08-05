@@ -62,6 +62,11 @@ agent having to choose to load a skill. Together they're ~5k tokens — cached, 
 fraction of a percent of context — and they're the full rubric, so there's no
 smaller summary to keep in sync. Genre skills still load per task.
 
+The hook only fires when the collection is installed as a plugin — copying or
+symlinking the skills into `~/.claude/skills/` makes them loadable but not
+always-on. To verify it's working, start a fresh session and ask whether the
+writing-core rules are in context.
+
 ## Any agent
 
 The skills are plain Markdown, usable by anything that reads instructions. Inject

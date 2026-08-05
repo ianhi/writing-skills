@@ -1,6 +1,6 @@
 ---
 name: writing-docs
-description: Write and review user-facing documentation — how-to guides, conceptual explanations, API/reference docs, READMEs, contributor guides, design docs. Load writing-core first for the shared foundation; this adds what's specific to documentation: completeness, dependency ordering, consistent format, scope notes, and code/prose integration. Use when authoring or editing docs, or when asked to make docs clearer or better structured. Step-by-step lessons that teach a concept are writing-teaching.
+description: Write and review user-facing documentation — how-to guides, conceptual explanations, API/reference docs, READMEs, contributor guides, design docs. Load writing-core first for the shared foundation; this adds what's specific to documentation, namely completeness, dependency ordering, consistent format, scope notes, and code/prose integration. Use when authoring or editing docs, or when asked to make docs clearer or better structured. Step-by-step lessons that teach a concept are writing-teaching.
 ---
 
 # Writing Docs

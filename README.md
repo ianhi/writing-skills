@@ -55,24 +55,43 @@ grades a piece against `writing-core` plus the relevant genre skill.
 
 ## Always-on
 
-Installing the plugin adds a `SessionStart` hook that prints `writing-core` and
-`writing-conversation` into context at the start of every session (and after
-`/clear` or a compaction), so the rules govern from the first turn without the
-agent having to choose to load a skill. Together they're ~5k tokens — cached, a
-fraction of a percent of context — and they're the full rubric, so there's no
-smaller summary to keep in sync. Genre skills still load per task.
+Installing the plugin adds a `SessionStart` hook that tells the agent to load
+`writing-core` and `writing-conversation` at the start of every session (and after
+`/clear` or a compaction), so the rules govern from the first turn instead of
+waiting for the agent to notice it needs them. Genre skills still load per task.
+
+The hook injects the instruction, not the rules themselves. Claude Code truncates
+`SessionStart` output to a 2KB preview and spills the rest to a file the model
+never reads, so a hook that printed both files (~20KB) would deliver about a tenth
+of `writing-core` and none of `writing-conversation`. Two consequences worth
+knowing: loading costs a tool call per session, and a subagent gets nothing —
+`SessionStart` runs once for the main session, and subagents inherit only the
+prompt you hand them. Tell a subagent to load the skills when you delegate prose
+work.
 
 The hook only fires when the collection is installed as a plugin — copying or
 symlinking the skills into `~/.claude/skills/` makes them loadable but not
-always-on. To verify it's working, start a fresh session and ask whether the
-writing-core rules are in context.
+always-on.
+
+To check the hook fires and its instruction arrives intact, run this from anywhere:
+
+```bash
+echo 'No tools. Quote verbatim any SessionStart hook output in your context.' \
+  | claude -p --tools ""
+```
+
+`--tools ""` keeps the answer honest: with no tools the session can't go read
+anything, so whatever it quotes came from the hook. That the agent then *acts* on
+the instruction shows up in a normal session as a `writing-core` skill load on the
+first turn.
 
 ## Any agent
 
 The skills are plain Markdown, usable by anything that reads instructions. Inject
 `skills/writing-core/SKILL.md` and `skills/writing-conversation/SKILL.md` wherever
-your agent reads instructions every turn (that is all the hook does), then load a
-genre skill per task.
+your agent reads instructions every turn, then load a genre skill per task. On a
+platform with no size limit on injected context this beats the plugin hook, which
+has to ask for the files rather than supply them.
 
 ## Developing
 

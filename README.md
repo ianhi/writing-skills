@@ -19,13 +19,16 @@ In Claude Code, install from the `ianhi-plugins` marketplace:
 /plugin marketplace add ianhi/claude-plugins
 /plugin install writing@ianhi-plugins
 /plugin reload-plugins
+/writing-core
 ```
 
 `reload-plugins` makes the skills available in the current session, but it does not
-replay `SessionStart`, so the always-on rules below don't load until you `/clear` or
-start a new session — or run `/writing-core` to load them on the spot. Update later with `/plugin marketplace update ianhi-plugins`
-then `/plugin update writing@ianhi-plugins` — both need a version bump in the
-plugin manifest to take effect. Remove with `/plugin uninstall writing`.
+replay `SessionStart` — hence `/writing-core`, which loads the always-on rules for
+the session you're already in. New sessions get them from the hook.
+
+Update later with `/plugin marketplace update ianhi-plugins` then `/plugin update
+writing@ianhi-plugins` — both need a version bump in the plugin manifest to take
+effect. Remove with `/plugin uninstall writing`.
 
 You get all seven skills — they auto-load per task from their descriptions — with
 the core and conversation rules [always on](#always-on). Using a different agent?

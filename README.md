@@ -63,27 +63,15 @@ waiting for the agent to notice it needs them. Genre skills still load per task.
 The hook injects the instruction, not the rules themselves. Claude Code truncates
 `SessionStart` output to a 2KB preview and spills the rest to a file the model
 never reads, so a hook that printed both files (~20KB) would deliver about a tenth
-of `writing-core` and none of `writing-conversation`. Two consequences worth
-knowing: loading costs a tool call per session, and a subagent gets nothing —
-`SessionStart` runs once for the main session, and subagents inherit only the
-prompt you hand them. Tell a subagent to load the skills when you delegate prose
-work.
+of `writing-core` and none of `writing-conversation`. Loading them therefore costs
+a tool call per session. Subagents get nothing either way — `SessionStart` runs
+once for the main session, and a subagent inherits only the prompt you hand it, so
+tell it to load the skills when you delegate prose work.
 
 The hook only fires when the collection is installed as a plugin — copying or
 symlinking the skills into `~/.claude/skills/` makes them loadable but not
-always-on.
-
-To check the hook fires and its instruction arrives intact, run this from anywhere:
-
-```bash
-echo 'No tools. Quote verbatim any SessionStart hook output in your context.' \
-  | claude -p --tools ""
-```
-
-`--tools ""` keeps the answer honest: with no tools the session can't go read
-anything, so whatever it quotes came from the hook. That the agent then *acts* on
-the instruction shows up in a normal session as a `writing-core` skill load on the
-first turn.
+always-on. When it's working, a fresh session loads `writing-core` on its first
+turn.
 
 ## Any agent
 

@@ -16,23 +16,26 @@ it returns.
 
 ## Workflow
 
-1. **Scope and calibrate.** Identify the target, its genre, and its audience —
+1. **Re-read it yourself first**, if the piece is your own draft — `writing-core`
+   §10, in full. Reviewers are a second opinion on revised prose; dispatching them
+   on a first draft spends their attention on what the checklist would have caught.
+2. **Scope and calibrate.** Identify the target, its genre, and its audience —
    confirm the audience (`writing-core` §1) if it isn't obvious, since the rubric is
    applied relative to it. Load `writing-core` + the matching genre skill.
-2. **Dispatch reviewers — fan out by default.** Run the lenses below as *parallel*
+3. **Dispatch reviewers — fan out by default.** Run the lenses below as *parallel*
    subagents (each reads the whole piece, grades one lens), then merge and dedupe
    the findings in the main context. Drop to a single reviewer only for a short
    piece. Reviewers are bounded judgment, not authoring, so run them on a cheaper,
    faster model — Sonnet by default, Haiku for the mechanical lenses (parallelism,
    AI-ese, dead references). A general-purpose agent is fine; no bespoke type needed.
-3. **Report, ranked by impact.** A broken structure or a misled reader outranks a
+4. **Report, ranked by impact.** A broken structure or a misled reader outranks a
    wording nit. Each finding gives its location (`file:line` + the quoted passage),
    the rule it breaks, and the fix shown as a before/after or small proposed diff.
-4. **Show before applying.** It's the user's piece (core collaboration) — present
+5. **Show before applying.** It's the user's piece (core collaboration) — present
    findings and let them choose. With `--fix`, apply the high-confidence, non-voice
    fixes directly (dead references, AI-ese, non-parallel lists, unsourced claims)
    and report the rest; never auto-rewrite the author's established voice.
-5. **Re-run.** Expect two or three rounds on a substantial piece — fixes surface
+6. **Re-run.** Expect two or three rounds on a substantial piece — fixes surface
    new issues. Stop when only minor or subjective items remain.
 
 ## Fan-out lenses
@@ -56,7 +59,9 @@ Target: DOC   (genre: GENRE   audience: AUDIENCE)
 1. Read it in full.
 2. Grade against the rubric (paste writing-core + the matching genre skill's
    rubric/checklist), judged for THIS audience and genre. Overriding lens: does
-   every choice minimize the reader's effort?
+   every choice minimize the reader's effort? Judge repeated constructions —
+   antithesis, triad — by their count across the whole piece, not one at a time;
+   a carve-out that excuses each instance still leaves a signature.
 3. Report findings RANKED BY IMPACT. Each: location (`file:line` and the exact
    quoted passage), the rule it breaks (one sentence), and the fix as a before/after
    or small proposed diff, specific enough to apply.

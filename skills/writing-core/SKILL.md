@@ -160,6 +160,11 @@ The default register for all technical writing.
   headers, tables — as opposed to §3's organization. Good when it aids scanning;
   reach for it freely. Don't split a single thought across bullets, and don't use
   formatting to dress up padding.
+- **Break out an enumerated set.** When a sentence lists parallel items they
+  belong in a list, whether it announces a count ("the same three needs") or not
+  ("touches the parser, the cache, and the retry policy"). Left as prose, they
+  make the reader find the boundaries and keep the tally, and a closing sentence
+  about their consequence blurs into the set.
 - **Bold a few words.** Not whole sentences — emphasis works by contrast. Bold the
   two or three words that carry the point, or none.
 - **Keep parallel things parallel.** Headings at one level, and bullets in one
@@ -301,6 +306,7 @@ had this pass, never a substitute for it. Scan for:
   noting"), even one shaped like a topic sentence → cut it
 - a transition that only announces the shift → delete it and reread the two
   paragraphs
+- an enumerated set buried in prose → make it a list
 - a whole-sentence bold, an em-dash pileup, or an adjective stack → cut
 - process narration, a prior-draft reference, or a line describing the document
   → cut it

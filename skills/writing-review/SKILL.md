@@ -46,8 +46,10 @@ it returns.
 Split a large review so no single pass skims; each reviewer sees the whole piece
 but grades one lens:
 
-- **Structure & flow** — order, dependency, importance, framing (§3 + genre).
-- **Prose & AI-ese** — plain and direct, subtraction, the AI-ese tells (§4, §5, §7).
+- **Structure & flow** — order, dependency, importance, framing, enumerated sets
+  left as prose (§3, §4 + genre).
+- **Prose & AI-ese** — plain and direct, subtraction, the AI-ese tells (§4's
+  sentence-level rules, §5, §7).
 - **Reader-context & honesty** — out-of-context leaks, verified and sourced claims
   (§6, §8, §9).
 - **Genre fit** — the matching genre skill's own Review checklist.

@@ -181,7 +181,8 @@ deletion: cut the sentence and see whether the paragraph lost a fact.
 
 Judging one sentence at a time also misses repetition. Any shape below can be
 defensible once; three of the same construction in one piece read as
-machine-written whether or not each survives alone. Count before defending any.
+machine-written whether or not each survives alone. Count instances before
+defending any.
 
 - **The regular-beat triad.** Three short parallel phrases restating one idea in
   the same rhythm — "fully net-new, no warm path, straight cold." Say it once, with

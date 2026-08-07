@@ -23,11 +23,14 @@ it returns.
    confirm the audience (`writing-core` §1) if it isn't obvious, since the rubric is
    applied relative to it. Load `writing-core` + the matching genre skill.
 3. **Dispatch reviewers — fan out by default.** Run the lenses below as *parallel*
-   subagents (each reads the whole piece, grades one lens), then merge and dedupe
-   the findings in the main context. Drop to a single reviewer only for a short
-   piece. Reviewers are bounded judgment, not authoring, so run them on a cheaper,
-   faster model — Sonnet by default, Haiku for the mechanical lenses (parallelism,
-   AI-ese, dead references). A general-purpose agent is fine; no bespoke type needed.
+   subagents (each reads the whole piece, grades one lens); each reviewer loads
+   `writing-core` and the genre skill on its own — subagents don't inherit your
+   loaded skills, and a pasted paraphrase gives them your blind spots, so they
+   miss what you missed. Merge and dedupe the findings in the main context. Drop
+   to a single reviewer only for a short piece. Reviewers are bounded judgment,
+   not authoring, so run them on a cheaper, faster model — Sonnet by default,
+   Haiku for the mechanical lenses (parallelism, AI-ese, dead references). A
+   general-purpose agent is fine; no bespoke type needed.
 4. **Report, ranked by impact.** A broken structure or a misled reader outranks a
    wording nit. Each finding gives its location (`file:line` + the quoted passage),
    the rule it breaks, and the fix shown as a before/after or small proposed diff.
@@ -56,9 +59,10 @@ Review this writing against the rubric — report problems, don't rewrite.
 
 Target: DOC   (genre: GENRE   audience: AUDIENCE)
 
-1. Read it in full.
-2. Grade against the rubric (paste writing-core + the matching genre skill's
-   rubric/checklist), judged for THIS audience and genre. Overriding lens: does
+1. Load `writing-core` and the GENRE skill yourself (Skill tool), then read the
+   piece in full. There is no rubric summary in this prompt on purpose — the
+   skills are the rubric.
+2. Grade it for THIS audience and genre. Overriding lens: does
    every choice minimize the reader's effort? Judge repeated constructions —
    antithesis, triad — by their count across the whole piece, not one at a time;
    a carve-out that excuses each instance still leaves a signature.

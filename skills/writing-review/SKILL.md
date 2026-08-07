@@ -16,9 +16,9 @@ it returns.
 
 ## Workflow
 
-1. **Re-read it yourself first**, if the piece is your own draft — `writing-core`
-   §10, in full. Reviewers are a second opinion on revised prose; dispatching them
-   on a first draft spends their attention on what the checklist would have caught.
+1. **Re-read it yourself first** if the piece is your own draft — `writing-core`
+   §10. Reviewers are a second opinion on revised prose, never a substitute for
+   that pass.
 2. **Scope and calibrate.** Identify the target, its genre, and its audience —
    confirm the audience (`writing-core` §1) if it isn't obvious, since the rubric is
    applied relative to it. Load `writing-core` + the matching genre skill.

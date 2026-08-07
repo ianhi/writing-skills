@@ -34,6 +34,11 @@ and structure**, and **any rewrite of prose they already wrote** (§2). When a
 choice would change its direction, surface it and ask rather than deciding
 silently.
 
+## Check it before you show it
+
+Never hand the user prose you haven't **checked against these rules** yourself —
+the §10 checklist.
+
 ## 1. Confirm the audience before you write
 
 Every other judgment — what to assume, what to cut, how to sequence — is made
@@ -137,6 +142,11 @@ The default register for all technical writing.
 - **Cut filler and hedging.** "it's worth noting", "in order to", "basically",
   "essentially", "I think", "as we can see" — delete them. One strong sentence
   beats three.
+- **Make transitions carry information or cut them.** A paragraph break already
+  signals a shift, so a sentence whose only job is to announce it is redundant —
+  "this brings us to…", "the second reason matters more". Delete the transition
+  and reread the two paragraphs back to back; write it in again only if they no
+  longer connect.
 - **Prefer plain words.** "use" not "utilize", "helps" not "facilitates". Skip
   throat-clearing adjectives ("robust", "seamless", "powerful", "comprehensive")
   unless they carry real information.
@@ -150,6 +160,11 @@ The default register for all technical writing.
   headers, tables — as opposed to §3's organization. Good when it aids scanning;
   reach for it freely. Don't split a single thought across bullets, and don't use
   formatting to dress up padding.
+- **Break out an enumerated set.** When a sentence lists parallel items they
+  belong in a list, whether it announces a count ("the same three needs") or not
+  ("touches the parser, the cache, and the retry policy"). Left as prose, they
+  make the reader find the boundaries and keep the tally, and a closing sentence
+  about their consequence blurs into the set.
 - **Bold a few words.** Not whole sentences — emphasis works by contrast. Bold the
   two or three words that carry the point, or none.
 - **Keep parallel things parallel.** Headings at one level, and bullets in one
@@ -164,7 +179,15 @@ list*: ban the emptiness, not the word.
 
 One general test catches shapes no list can enumerate: does a sentence carry a
 fact, or only *comment on* the content — how to feel about it, that it's coming,
-that it matters? The second kind is the tell.
+that it matters? The second kind is the tell. The hard case is fluff at sentence
+length: "The expensive part is not the training run, it is everything around it."
+That reads as a topic sentence, so it survives a skim. Apply the test by
+deletion: cut the sentence and see whether the paragraph lost a fact.
+
+Judging one sentence at a time also misses repetition. Any shape below can be
+defensible once; three of the same construction in one piece read as
+machine-written whether or not each survives alone. Count instances before
+defending any.
 
 - **The regular-beat triad.** Three short parallel phrases restating one idea in
   the same rhythm — "fully net-new, no warm path, straight cold." Say it once, with
@@ -265,9 +288,11 @@ much that links become noise:
 - **Never invent a URL.** If a claim can't be sourced, cut it or flag it — don't
   fabricate a link.
 
-## 10. Re-read before you finalize
+## 10. Re-read before anyone else sees it
 
-One deliberate pass, not a skim; the failure is not looking. Scan for:
+Make one deliberate pass over the whole piece, checking it for violations of the
+rules above; don't skim. `writing-review` is a second opinion on prose that has
+had this pass, never a substitute for it. Scan for:
 
 - a winding preamble before the point → lead with the answer
 - the central claim buried in a subordinate clause → give it its own sentence
@@ -275,8 +300,13 @@ One deliberate pass, not a skim; the failure is not looking. Scan for:
 - a vague "this / it / here" with no antecedent → name it
 - a 3-beat triad, "X isn't just Y — it's Z", or an "A, not B" where B names no
   real mistake → say it once, plainly
+- the same construction three times in one piece → cut all but the one that earns
+  it
 - a sentence that only announces or rates what follows ("the key part", "worth
-  noting") → cut it
+  noting"), even one shaped like a topic sentence → cut it
+- a transition that only announces the shift → delete it and reread the two
+  paragraphs
+- an enumerated set buried in prose → make it a list
 - a whole-sentence bold, an em-dash pileup, or an adjective stack → cut
 - process narration, a prior-draft reference, or a line describing the document
   → cut it

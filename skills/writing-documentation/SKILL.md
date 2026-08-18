@@ -1,9 +1,9 @@
 ---
-name: writing-docs
-description: Write and review user-facing documentation — how-to guides, conceptual explanations, API/reference docs, READMEs, contributor guides, design docs. Load writing-core first for the shared foundation; this adds what's specific to documentation, namely completeness, dependency ordering, consistent format, scope notes, and code/prose integration. Use when authoring or editing docs, or when asked to make docs clearer or better structured. Step-by-step lessons that teach a concept are writing-teaching.
+name: writing-documentation
+description: Write and review user-facing documentation for a system that exists — how-to guides, conceptual explanations, API/reference docs, READMEs, contributor guides. Load writing-core first for the shared foundation; this adds what's specific to documentation, namely completeness, dependency ordering, consistent format, scope notes, and code/prose integration. Use when authoring or editing docs, or when asked to make docs clearer or better structured. Step-by-step lessons that teach a concept are writing-teaching; design docs, plan docs, RFCs, and ADRs that propose an approach are writing-proposals.
 ---
 
-# Writing Docs
+# Writing Documentation
 
 User-facing documentation — the guides and explanations people read to understand
 and use a system, plus the reference material they consult. **Load `writing-core`
@@ -15,6 +15,9 @@ keys) is more formulaic, mostly completeness and consistent format. Step-by-step
 lessons that *teach a concept* to a newcomer are `writing-teaching`, not here: the
 line is the job. Teaching walks a learner from zero to a mental model; docs serve
 a user who already has context and needs to understand or do one specific thing.
+And a doc that *proposes* an approach for review — a design doc, plan, RFC, or ADR
+— is `writing-proposals`: documentation explains a system that exists, a proposal
+argues for one that doesn't yet.
 
 Doc types and their key concern:
 
@@ -25,7 +28,6 @@ Doc types and their key concern:
 | Reference docs | Completeness, consistent format, dependency ordering |
 | Contributor guide | Internals focus, verified claims, the "why" behind decisions |
 | README | Fast orientation: what it is, why, how to start — in that order |
-| Design doc | The problem and the decision; alternatives considered and why not |
 | Research notebook | Reference kept separate from experiments, each part labeled |
 
 ## Authoring

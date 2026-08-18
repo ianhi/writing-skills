@@ -1,6 +1,6 @@
 ---
 name: writing-reports
-description: Write and review shareable prose deliverables — internal reports, BD/prospect briefs, summary docs, anything shipped as a PDF or pasted into Slack — so a busy human actually reads it. Load writing-core first; this adds human-scannability structure, fact-blocks, trailing-citation linking, and honesty rules. Use when authoring or editing a report or brief, or when the ask is "make this scannable / tighter / less AI-ese / easier to read".
+description: Write and review shareable prose deliverables — internal reports, BD/prospect briefs, summary docs, anything shipped as a PDF or pasted into Slack — so a busy human actually reads it. Load writing-core first; this adds human-scannability structure, fact-blocks, trailing-citation linking, and honesty rules. Use when authoring or editing a report or brief, or when the ask is "make this scannable / tighter / less AI-ese / easier to read". A document that argues for a decision — a design doc, plan, RFC, or ADR — is writing-proposals.
 ---
 
 # Writing Reports
@@ -84,6 +84,10 @@ For reports specifically:
 
 - **No repo/tooling housekeeping** — "`reports/` is gitignored", file paths. A plain
   confidentiality marker (*Private — internal use only*) is the only meta allowed.
+- **No author-only pointers** — a link to an internal handoff doc, a private
+  knowledge base, or a session scratchpad path is dead to the reader and leaks
+  internal context. Inline the substance and flag it, or link a shared equivalent
+  (core §9).
 - **No internal metrics or analyst jargon** — never print tool counts/buckets ("62
   items", "PR-weighted", "signal: high"). Translate to plain activity language: "a
   sustained, active integration", "a one-off mention". Describe magnitude in words.
@@ -115,6 +119,8 @@ Skim it as the target reader would in 30 seconds:
 - Does every repeating block look distinct (heading + air + rule)?
 - Is every org/item list bulleted with bold names?
 - Are links trailing citations, not whole sentences? Does every `#number` link?
+- Any link only the author can open — an internal handoff doc, private KB, or
+  scratchpad path (§9)? Inline its substance or cut it.
 - Any wall-of-text paragraph, regular-beat triad, fluff, or internal jargon left (§5)?
 - Any editorial judgment the facts don't force — a ranking, tier, confidence label,
   tactical instruction, or line about the document itself (§6)? Cut it.

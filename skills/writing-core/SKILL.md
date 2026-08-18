@@ -1,14 +1,14 @@
 ---
 name: writing-core
-description: The shared foundation for all technical writing — minimizing reader effort, confirming audience, voice, narrative structure, plain and direct prose, avoiding AI-ese, and verifying and sourcing claims. Load this first for any writing task, then load the genre skill (writing-docs, writing-teaching, writing-comms, or writing-reports) that fits what you're writing.
+description: The shared foundation for all technical writing — minimizing reader effort, confirming audience, voice, narrative structure, plain and direct prose, avoiding AI-ese, and verifying and sourcing claims. Load this first for any writing task, then load the genre skill (writing-documentation, writing-teaching, writing-comms, writing-reports, or writing-proposals) that fits what you're writing.
 ---
 
 # Writing Core
 
 The principles common to every kind of technical writing — docs, tutorials,
 blog posts, reports, PRs, commit messages, chat. Load this first, then the **genre
-skill** that fits (`writing-docs`, `writing-teaching`, `writing-comms`, or
-`writing-reports`). Each genre skill holds an Authoring and a Review section on
+skill** that fits (`writing-documentation`, `writing-teaching`, `writing-comms`,
+`writing-reports`, or `writing-proposals`). Each genre skill holds an Authoring and a Review section on
 one rubric: read its review bar *before* drafting.
 
 Talking with the user in-session isn't a genre — the always-on
@@ -268,7 +268,7 @@ Every claim must trace to something checkable, never to invention.
 
 ## 9. Link and cite your claims
 
-Linking *between* documentation pages is genre-specific — see `writing-docs`. What
+Linking *between* documentation pages is genre-specific — see `writing-documentation`. What
 is universal is sourcing your claims — enough that a reader can check them, not so
 much that links become noise:
 
@@ -278,6 +278,12 @@ much that links become noise:
 - **Don't over-link.** Link what a skeptical reader would actually want to verify;
   skip the obvious, and don't re-link the same source at every mention. A page of
   blue text is as hard to read as one with no links.
+- **Link only what the reader can open.** A pointer to a private handoff doc, an
+  internal knowledge base, or a session scratchpad path is a dead link to everyone
+  but you — and it leaks internal context or implies access the reader lacks. When
+  such a source is load-bearing, pull its substance inline and flag for the author
+  that an internal-only source backs it; otherwise link a shared equivalent. Never
+  drop an author-only link into a piece that ships to others.
 - **Cite with a compact trailing link**, not a whole-sentence hyperlink — whole-phrase
   links bleed together and kill scanning.
   - Bad: `They [reproduced corruption in production](url) and [worked around it](url).`
@@ -315,3 +321,5 @@ had this pass, never a substitute for it. Scan for:
 - a non-parallel list → match the grammatical form
 - a term used before it's defined → define it on first use
 - a load-bearing claim with no source → link it or cut it
+- a link only you can open — a private handoff doc, internal KB, or scratchpad path
+  → inline its substance and flag it, or link a shared equivalent

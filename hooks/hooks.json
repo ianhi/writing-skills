@@ -8,7 +8,7 @@
             "type": "command",
             "command": "echo",
             "args": [
-              "Load the writing-core and writing-conversation skills now, before replying. They govern every reply in this session and all prose written in it. For a writing task, add the genre skill (writing-docs, writing-teaching, writing-comms, writing-reports), and writing-review to review. When delegating prose work to a subagent, tell it to load them too — it does not inherit them."
+              "Load the writing-core and writing-conversation skills now, before replying. They govern every reply in this session and all prose written in it. For a writing task, add the genre skill (writing-documentation, writing-teaching, writing-comms, writing-reports, writing-proposals), and writing-review to review. When delegating prose work to a subagent, tell it to load them too — it does not inherit them."
             ],
             "statusMessage": "Loading writing core"
           }

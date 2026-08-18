@@ -30,7 +30,7 @@ Update later with `/plugin marketplace update ianhi-plugins` then `/plugin updat
 writing@ianhi-plugins` — both need a version bump in the plugin manifest to take
 effect. Remove with `/plugin uninstall writing`.
 
-You get all seven skills — they auto-load per task from their descriptions — with
+You get all eight skills — they auto-load per task from their descriptions — with
 the core and conversation rules [always on](#always-on). Using a different agent?
 The skills are plain Markdown; see [Any agent](#any-agent).
 
@@ -39,16 +39,17 @@ The skills are plain Markdown; see [Any agent](#any-agent).
 | Skill | Use it for |
 |-------|-----------|
 | **`writing-core`** | The shared foundation. Load first for any writing task: reader effort, confirming audience, voice, structure, plain/direct prose, avoiding AI-ese, out-of-context reading, verified and sourced claims. |
-| **`writing-docs`** | Reference and how-to docs — API docs, READMEs, contributor guides, design docs. |
+| **`writing-documentation`** | Documentation of a system that exists — how-to and conceptual guides, API docs, READMEs, contributor guides. |
 | **`writing-teaching`** | Tutorials, teaching notebooks, explanatory/blog posts. Narrative arc (ABT), the pedagogy rubric, and a reviewer-subagent workflow. |
 | **`writing-comms`** | Short-form you send to others — PR descriptions, commit messages, Slack, issue comments. |
 | **`writing-reports`** | Shareable prose deliverables — reports, BD/prospect briefs, summaries read out of context. Human scannability first. |
+| **`writing-proposals`** | Documents that propose an approach for review — design docs, plan docs, RFCs, ADRs. Lead with the decision, weigh alternatives. |
 | **`writing-conversation`** | Talking with the *user* in-session. Always-on, not a per-task genre. |
 | **`writing-review`** | Review any prose against the rubric — dispatch a reviewer subagent, rank findings, optionally apply. The `/simplify` for writing. |
 
 ## How it fits together
 
-`writing-core` holds every principle common to technical writing. The four **genre
+`writing-core` holds every principle common to technical writing. The five **genre
 skills** are thin and assume it — load core first, then the genre that matches what
 you're writing. Review is a section *within* each genre skill, on the same rubric as
 its authoring guidance.
